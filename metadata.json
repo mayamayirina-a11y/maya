@@ -1,0 +1,6 @@
+{
+  "name": "Босоо Уншлага — Монгол бичгийн уншлагын систем",
+  "description": "Монгол бичгийн 60 секундын уншлагын шалгалт, ангийн удирдлага, тестийн сан, уралдаан, ахицын тайлан ба санамсаргүй сонголтын тоглоомууд.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

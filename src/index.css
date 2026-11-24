@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background: linear-gradient(135deg, #f0f4ff 0%, #fdf2f8 45%, #fffbeb 100%);
+    background-attachment: fixed;
+    color: #0f172a;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes gentle-wobble {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  20% { transform: rotate(-7deg) scale(1.04); }
+  40% { transform: rotate(7deg) scale(1.06); }
+  60% { transform: rotate(-5deg) scale(1.03); }
+  80% { transform: rotate(4deg) scale(1.02); }
+}
+
+@keyframes float-bob {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-12px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(64px) rotate(220deg); opacity: 0; }
+}
+
+.animate-wobble {
+  animation: gentle-wobble 0.55s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float-bob 2.4s ease-in-out infinite;
+}
+
+.animate-confetti {
+  animation: confetti-fall 1.3s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-wobble,
+  .animate-float,
+  .animate-confetti {
+    animation: none;
+  }
+}
